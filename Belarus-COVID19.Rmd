@@ -1,0 +1,33 @@
+---
+title: "Belarus COVID-19"
+author: "Yolanda Feng"
+date: "4/11/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+<!-- Set up and read data -->
+
+```{r, echo=FALSE}
+# set working directory
+
+setwd("C:/ZZZ/Study/2020 Spring/COVID-19")
+
+# read data file
+
+global <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_global.csv")
+global_death <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_global.csv")
+global_recover <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_recovered_global.csv")
+us <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv")
+us_death <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_deaths_US.csv")
+```
+
+<!-- seperate Belarus data -->
+
+```{r, echo=FALSE}
+# 
+
+```
