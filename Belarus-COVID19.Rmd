@@ -28,6 +28,20 @@ us_death <- read.csv("csse_covid_19_data/csse_covid_19_time_series/time_series_c
 <!-- seperate Belarus data -->
 
 ```{r, echo=FALSE}
-# 
+# creat flight df
+flight <- subset(global, Country.Region == c("Belarus","US"))
+flight_death <- subset(global_death, Country.Region == c("Belarus","US"))
+flight_recover <- subset(global_recover, Country.Region == c("Belarus","US"))
 
+# creat state df
+state <- subset(us, Province_State == c("Illinois","California"))
+state_death <- subset(us_death, Province_State == c("Illinois","California"))
+
+# standerdize format
+flight <- flight[,-c(1,3,4)]
+flight_death <- flight_death[,-c(1,3,4)]
+
+# creat merged df
+allpassby <- merge(flight, state)
+allpassby_death <- merge(flight_death, state_death)
 ```
